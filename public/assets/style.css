@@ -1,0 +1,175 @@
+.noFill{
+    fill:none;
+}
+body,html{
+    background: #edf0f1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.box{
+    width: 800px;
+    margin:0 auto;
+}
+/*添加表单样式*/
+header{
+    width: 100%;
+    height: 80px;
+    background:#25b99a;
+    /*border-top-left-radius:5px ;*/
+    /*border-bottom-left-radius: 5px;*/
+    /*border-top-right-radius: 25px;*/
+    /*border-bottom-right-radius: 25px;*/
+    border-radius: 5px;
+    z-index: 5;
+    position: relative;
+}
+header input{
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin:15px auto;
+    z-index: 2;
+    background: rgba(255,255,255,0.2);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    color: #fff;
+    border:0px;
+    outline:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+header input::-webkit-input-placeholder{
+    color:rgba(255,255,255,0.75);
+}
+header button{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border:0px;
+    box-shadow: none;
+    outline:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    top:15px;
+    right:0;
+    opacity:0.5;
+}
+header button:hover{
+    opacity:1;
+}
+header button svg{
+    width: 16px;
+    height: 16px;
+}
+header button svg .fill{
+    fill: #25b99a;
+}
+
+/*记事本展示样式*/
+.container{
+    width: 100%;
+    height:auto;
+    margin:10px auto;
+    float:left;
+}
+.container ul{
+    width: 100%;
+    margin:10px auto;
+    float: left;
+}
+.container ul li{
+    width: 100%;
+    min-height: 50px;
+    background:white;
+    padding:14px 10px 14px;
+    box-sizing: border-box;
+    position: relative;
+}
+.container ul li .nodeText{
+    width: 85%;
+}
+/*记事本按钮展示样式*/
+.container ul li .button{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right:0;
+    top:50%;
+    -webkit-transform: translate3d(0,-50%,0);
+    -ms-transform: translate3d(0,-50%,0);
+    -o-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+}
+.container ul li .button button{
+    width: 50px;
+    height: 50px;
+    float:left;
+    background:none;
+    border:0;
+    outline:none;
+    box-shadow:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+.container ul li .button button svg{
+    width: 22px;
+    height: 22px;
+}
+.container ul li .button button svg .fill{
+    fill: #c0cecb;
+}
+.container ul li .button .sign svg{
+    border-radius: 50%;
+    border: 1.5px solid #25b99a;
+}
+/*记事本按钮分界线样式*/
+.container ul li .button .sign{
+    position: relative;
+}
+.container ul li .button .sign:before{
+    content:"";
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #edf0f1;
+}
+/*用css实现已完成和未完成的分类样式*/
+/*1.两者之间有分割线如果已完成下面有内容的话*/
+.container ul.done{
+    position: relative;
+}
+.container ul.done:not(empty):before{
+    content: '';
+    width:200px;
+    height:1px;
+    background: #d8e5e0;
+    position: absolute;
+    top:-10px;
+    left:300px;
+}
+/*2.已完成的sign标签颜色填充，logo为白色；未完成鼠标移动此位置时则提亮*/
+.container ul.done li .sign svg{
+    background: #25b99a;
+}
+.container ul.done li .sign svg .fill{
+    fill:#fff;
+}
+.container ul.undone li .sign svg:hover{
+    background: rgba(37,185,154,0.75);
+}
+.container ul.undone li .sign svg .fill:hover{
+    fill: #fff;
+}
