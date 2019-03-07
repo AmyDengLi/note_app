@@ -30,5 +30,5 @@ app.get('/',(req,res)=>{
 views文件夹中主要用于存储ejs文件，构建app页面，主要靠css样式来搭建整个页面，已完成事件与未完成事件有横杆隔开，且已完成事件的“勾号”标注提亮
 点击最右边的勾号，可以将未完成的移到下方已完成列表中，刷新页面不会改变
 
-![image](https://github.com/AmyDengLi/note_app-Node.js-express-mongoose-/blob/master/image/925dad81a40d749824dfcd731083490.png )
+![image](https://github.com/AmyDengLi/note_app/blob/master/image/node_app.gif)
 
